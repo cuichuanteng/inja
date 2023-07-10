@@ -48,6 +48,11 @@ public:
     lexer_config.statement_close_force_rstrip = "-" + close;
     lexer_config.update_open_chars();
   }
+  
+  // 设置解析模板文件的根路径
+  void set_include_path(const std::string & include_path){
+    this->input_path = include_path;
+  }
 
   /// Sets the opener for template line statements
   void set_line_statement(const std::string& open) {
